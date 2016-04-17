@@ -12,6 +12,7 @@
 		55C6F05A1CC3C83900780B19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C6F0581CC3C83900780B19 /* Main.storyboard */; };
 		55C6F05C1CC3C83900780B19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C6F05B1CC3C83900780B19 /* Assets.xcassets */; };
 		55C6F05F1CC3C83900780B19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C6F05D1CC3C83900780B19 /* LaunchScreen.storyboard */; };
+		55C6F0671CC3CA4700780B19 /* CollectionViewPagingFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6F0661CC3CA4700780B19 /* CollectionViewPagingFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		55C6F05B1CC3C83900780B19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C6F05E1CC3C83900780B19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C6F0601CC3C83900780B19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55C6F0661CC3CA4700780B19 /* CollectionViewPagingFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewPagingFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				55C6F0541CC3C83900780B19 /* AppDelegate.swift */,
 				55C6F0561CC3C83900780B19 /* ViewController.swift */,
+				55C6F0661CC3CA4700780B19 /* CollectionViewPagingFlowLayout.swift */,
 				55C6F0581CC3C83900780B19 /* Main.storyboard */,
 				55C6F05B1CC3C83900780B19 /* Assets.xcassets */,
 				55C6F05D1CC3C83900780B19 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				55C6F0571CC3C83900780B19 /* ViewController.swift in Sources */,
 				55C6F0551CC3C83900780B19 /* AppDelegate.swift in Sources */,
+				55C6F0671CC3CA4700780B19 /* CollectionViewPagingFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +253,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = paging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cyhsu.paging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -260,10 +267,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = paging/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.cyhsu.paging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

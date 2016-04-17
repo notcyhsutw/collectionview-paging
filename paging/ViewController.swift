@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var collectionView: UICollectionView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // make the collection view looks like paged scrollView
+        collectionView?.decelerationRate = UIScrollViewDecelerationRateFast
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+    }
+    
+    
+}
